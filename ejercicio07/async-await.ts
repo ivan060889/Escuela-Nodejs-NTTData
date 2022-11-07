@@ -27,10 +27,17 @@ function conseguirProductos()
         {
             resolve(productos);
 
-        },1000)
+        },3000)
     });
 }
+//convertimos la funcion en asyn(asincrona va esperar el resultado)
+async function getMisProductos(){
+    let mi_productos= await conseguirProductos();
+    console.log(mi_productos);
+}
+getMisProductos();
+/*
 conseguirProductos().then(datos=>
     {
         console.log(datos)
-    })
+    })*/
